@@ -9,7 +9,7 @@ Thanks to EKAlgorithms (github.com/EvgenyKarkan/EKAlgorithms) for the idea and s
 
 Array
 ----- 
-1. Index of maximum element in array. 
+1. Index of maximum element in array. 						(done)
 2. In-place Array reverse.
 3. Intersection of two arrays.
 4. Find duplicates.
@@ -41,7 +41,7 @@ String
 Number
 -------
 1. Sieve of Eratosthenes.
-2. Great common divisor (GCD).					(done)
+2. Great common divisor (GCD).								(done)
 3. Least common multiple (LCM).
 4. Factorial.
 5. Fibonacci numbers.
