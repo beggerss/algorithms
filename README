@@ -1,0 +1,5 @@
+Beggerss' Ultimate Algorithm Repository
+
+I'll be implementing as many canonical CS algorithms as I have time (and motivation) to in Python. Feel free to fork! But don't send pull requests, this is to learn.
+
+The solutions might not be the most efficient--the code will be geared towards readability and pedagogy.
