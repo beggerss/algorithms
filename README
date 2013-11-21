@@ -10,13 +10,11 @@ Thanks to EKAlgorithms (github.com/EvgenyKarkan/EKAlgorithms) for the idea and s
 Array
 ----- 
 1. Index of maximum element in array. 
-2. Find longest string in array of strings. 
-3. Find shortest string in array of strings.
-4. Array reverse.
-5. Intersection of two arrays.
-6. Union of two arrays (with remove duplicates).
-7. Find duplicates.
-8. Array with N unique/not unique random objects.
+2. In-place Array reverse.
+3. Intersection of two arrays.
+4. Find duplicates.
+5. Union of two arrays (with remove duplicates).
+6. Array with N unique/not unique random objects.
 
 Search
 ------ 
@@ -39,13 +37,11 @@ String
 3. Words count.
 4. Permutations of string. 
 5. Occurrences of each character (a - z).
-6. Count needles in a haystack.
-7. Random string.
 
 Number
 -------
 1. Sieve of Eratosthenes.
-2. Great common divisor (GCD).
+2. Great common divisor (GCD).					(done)
 3. Least common multiple (LCM).
 4. Factorial.
 5. Fibonacci numbers.
@@ -54,15 +50,13 @@ Number
 8. Decimal to binary conversion.
 9. Fast exponentiation.
 10. Number reverse.
-11. Even/odd check.
-12. Leap year check.
 
 Data structures
 ---------------
 1. Stack (LIFO).
 2. Queue (FIFO).
-3. Deque.
 4. Linked list.
+	- kth-to-last element
 5. Graph 
     - DFS (depth-first search);
     - BFS (breadth-first search).
