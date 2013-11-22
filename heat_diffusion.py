@@ -36,32 +36,67 @@ def main():
 	print("Do you want to:\n\
 	1)	Use Monte Carlo to generate the image\n\
 	2)	Use Jakobi iteration to generate the image\n\
-	3)	Use Jakobi iteration to generate a gif (slow, and requires imagemagik)\n\
+	3)	Use Jakobi iteration to generate a gif (slow, and requires imagemagick)\n\
 	4) 	Do both and compare runtime/number of computations\n")
 	answer = input("Answer (default is 1): ")
 	if answer is 2:
-		grid = jakobi(grid, bounds)
+		grid = jakobi(grid)
 	elif answer is 3:
-		jakobi_gif(grid, name)
+		jakobi_gif(grid)
 	elif answer is 4:
-		compare(grid, bounds)
+		compare(grid)
 	else:
-		grid = monte_carlo(grid, bounds)
+		grid = monte_carlo(grid)
 	generate_map(grid, name)
 
-def monte_carlo(grid, bounds):
+def monte_carlo(grid, cmp=False):
+	"""
+	Finds a close approximation to the stable heat distribution on the grid
+	using n random walks on each point. Parameters are:
+	1) The grid. Boundaries should already be set.
+	2) A boolean telling whether or not to measure runtime and computations (False
+		by default). If true, the grid will not be returned,
+		only the (time, iterations)-tuple.
+	"""	
+	iterations = input("How many random walks should be done on each point? ")
+
+def jakobi(grid, cmp=False):
+	"""
+	Finds a  the stable heat distribution on the grid using Jakobi iteration.
+	Parameters are:
+	1) The grid. Boundaries should already be set.
+	2) A boolean telling whether or not to measure runtime and computations (False
+		by default). If true, the grid will not be returned,
+		only the (time, iterations)-tuple.
+	"""
 	pass
 
-def jakobi(grid, bounds):
+def jakobi_gif(grid, delete=True):
+	"""
+	Generates a gif of heat diffusing through the grid (imagemagick required).
+	Parameters are:
+	1) The grid. Boundaries should already be set.
+	2) A boolean telling whether or not to delete the individual frames after
+		creating the gif (True by default).
+	"""
 	pass
 
-def jakobi_gif(grid, bounds, name):
-	pass
-
-def compare(grid, bounds):
+def compare(grid):
+	"""
+	Finds the final heat distribution using jakobi iteration and Monte Carlo,
+	then prints out some statistics about relative runtime/number of computations.
+	Parameters are:
+	1) The grid. Boundaries should already be set.
+	"""
 	pass
 
 def generate_map(grid, name):
+	"""
+	Generates a heatmap image of the passed grid.
+	Parameters are:
+	1) The grid. Heat distribution should already have been found.
+	2) The name of the file to write the heatmap out to.
+	"""
 	pass
 
 if __name__ == "__main__":
