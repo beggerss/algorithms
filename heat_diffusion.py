@@ -2,7 +2,7 @@
 # Author: Ben Eggers
 
 import math # for math
-import numpy # for faster math
+import numpy as np # for faster math
 import PIL # for pretty math
 
 # This script can be used several ways: the first is to calculate the final
@@ -15,31 +15,54 @@ import PIL # for pretty math
 def main():
 	gridx = input("X length of grid (px)?: ")
 	gridy = input("Y length of grid (px)?: ")
-	area_count = input("How many areas would you like each edge to be divided \
-		into (1 - min(x, y))?: ")
+	area_count = input("How many areas would you like each edge to be divided\
+ into (1 - min(x, y))?: ")
 	bounds = [[],[],[],[]] # one array for each edge
 	for x in range(area_count):
-		bounds[0].append(input("Temperature in area %d of top? ") % (x+1))
+		bounds[0].append(input("Temperature in area %d of top? " % (x+1)))
 	for x in range(area_count):
-		bounds[0].append(input("Temperature in area %d of right? ") % (x+1))
+		bounds[1].append(input("Temperature in area %d of right? " % (x+1)))
 	for x in range(area_count):
-		bounds[0].append(input("Temperature in area %d of left? ") % (x+1))
+		bounds[2].append(input("Temperature in area %d of left? " % (x+1)))
 	for x in range(area_count):
-		bounds[0].append(input("Temperature in area %d of bottom? ") % (x+1))
-	grid = None
+		bounds[3].append(input("Temperature in area %d of bottom? " % (x+1)))
+	print(bounds)
+	name = raw_input("What should the generated image be called?: ")
+	if name is "":
+		raise "Come on, pick a name"
+	# Now, generate the grid
+	grid = np.array([np.array([0 for y in range(gridy)]) for x in range(gridx)])
 	
+	print("Do you want to:\n\
+	1)	Use Monte Carlo to generate the image\n\
+	2)	Use Jakobi iteration to generate the image\n\
+	3)	Use Jakobi iteration to generate a gif (slow, and requires imagemagik)\n\
+	4) 	Do both and compare runtime/number of computations\n")
+	answer = input("Answer (default is 1): ")
+	if answer is 2:
+		grid = jakobi(grid, bounds)
+	elif answer is 3:
+		jakobi_gif(grid, name)
+	elif answer is 4:
+		compare(grid, bounds)
+	else:
+		grid = monte_carlo(grid, bounds)
+	generate_map(grid, name)
 
-	generate_map(grid)
+def monte_carlo(grid, bounds):
+	pass
 
-def jakobi(...):
+def jakobi(grid, bounds):
+	pass
 
+def jakobi_gif(grid, bounds, name):
+	pass
 
-def monte_carlo(...):
+def compare(grid, bounds):
+	pass
 
-
-def generate_map(grid):
-	raise "Something went wrong" if grid is None
-
+def generate_map(grid, name):
+	pass
 
 if __name__ == "__main__":
 	main()
