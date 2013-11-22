@@ -40,7 +40,7 @@ String
 
 Numbers
 -------
-- [ ] Sieve of Eratosthenes.
+- [x] Sieve of Eratosthenes.
 - [x] Great common divisor (Eclidean).
 - [ ] Least common multiple (LCM).
 - [ ] Factorial.
@@ -82,8 +82,12 @@ Statistics
 ----------------
 - [ ] Monte Carlo vs. Jakobi Iteration Heat Diffusion
 
+Pathfinding
+---------------
+- [ ] A*
+
 
 Sources
 ==========
-EKAlgorithms (github.com/EvgenyKarkan/EKAlgorithms) for the idea/starting list.
+EKAlgorithms (https://github.com/EvgenyKarkan/EKAlgorithms) for the idea/starting list.
 Karan (https://github.com/karan/Projects) for many additions.
