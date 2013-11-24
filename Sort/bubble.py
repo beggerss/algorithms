@@ -7,8 +7,8 @@ import time
 # Implementation of a bubble sort in Python.
 
 def main():
-	base = 10
-	for x in range(1, 5):
+	base = 2
+	for x in range(1, 14):
 		arr = [np.random.randint(0, base**x) for k in range(base**x)]
 		start = int(round(time.time() * 1000))
 		bubble_sort(arr)
