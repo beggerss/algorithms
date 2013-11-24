@@ -1,19 +1,25 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 # Author: Ben Eggers
 
 import numpy as np
 import time
+import matplotlib.pyplot as plt
 
 # Implementation of a bubble sort in Python.
 
 def main():
-	base = 2
-	for x in range(1, 14):
-		arr = [np.random.randint(0, base**x) for k in range(base**x)]
+	base = 200
+	x_points = []
+	y_points = []
+	for x in range(1, 20):
+		arr = [np.random.randint(0, base*x) for k in range(base*x)]
 		start = int(round(time.time() * 1000))
 		bubble_sort(arr)
 		end	= int(round(time.time() * 1000))
+		x_points.append(len(arr))
+		y_points.append(end - start)
 		print("%d ms required to sort array of length %d."% (end - start, len(arr)))
+	make_plot(x_points, y_points)
 
 def bubble_sort(arr):
 	keep_going = True
@@ -27,6 +33,14 @@ def bubble_sort(arr):
 				arr[x + 1] = tmp
 				keep_going = True
 	return arr
+
+def make_plot(x_points, y_points):
+	plt.plot(x_points, y_points, 'ro')
+	plt.axis([0, max(x_points), 0, max(y_points)])
+	plt.xlabel('length of array')
+	plt.ylabel('time to sort (milliseconds)')
+	plt.title('Efficiency of bubble sort')
+	plt.show()
 
 if __name__ == "__main__":
 	main()
