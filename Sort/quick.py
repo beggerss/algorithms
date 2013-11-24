@@ -9,10 +9,10 @@ import itertools
 # Implementation of a quicksort in Python.
 
 def main():
-	base = 200
+	base = 10000
 	x_points = []
 	y_points = []
-	for x in range(1, 100):
+	for x in range(1, 20):
 		arr = [np.random.randint(0, base*x) for k in range(base*x)]
 		start = int(round(time.time() * 1000))
 		arr = quick_sort(arr)
@@ -24,7 +24,7 @@ def main():
 	make_plot(x_points, y_points)
 
 def quick_sort(arr):
-	if len(arr) is 0 or len(arr) is 1:
+	if len(arr) <= 1:
 		return arr
 	# There are many ways to choose a pivot, we'll just grab a random element
 	pivot_index = np.random.randint(0, len(arr) - 1)
@@ -38,6 +38,7 @@ def quick_sort(arr):
 		else:
 			greater.append(x)
 	lists = [quick_sort(less), [pivot], quick_sort(greater)]
+	# pivot must be in its own sublist for the below list comprehension to work
 	return [item for sublist in lists for item in sublist]
 
 def make_plot(x_points, y_points):
