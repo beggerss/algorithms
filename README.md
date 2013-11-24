@@ -22,7 +22,7 @@ Search
 
 Sort
 ----
-- [ ] Bubble sort.
+- [x] Bubble sort.
 - [ ] Shell sort.
 - [ ] Merge sort.  
 - [ ] Quick sort.  
