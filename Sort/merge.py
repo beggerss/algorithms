@@ -8,20 +8,19 @@ import matplotlib.pyplot as plt
 # Implementation of mergesort written in Python.
 
 def main():
-	# base = 10000
-	# x_points = []
-	# y_points = []
-	# for x in range(1, 20):
-	# 	arr = [np.random.randint(0, base*x) for k in range(base*x)]
-	# 	start = int(round(time.time() * 1000))
-	# 	arr = merge_sort(arr)
-	# 	end = int(round(time.time() * 1000))
-	# 	x_points.append(len(arr))
-	# 	y_points.append(end - start)
-	# 	print("%d ms required to sort array of length %d using quicksort." 
-	# 		% (end - start, len(arr)))
-	# make_plot(x_points, y_points)
-	print(merge_sort([1,12,987,5,4,4,6,8,65,4]))
+	base = 100
+	x_points = []
+	y_points = []
+	for x in range(1, 200):
+		arr = [np.random.randint(0, base*x) for k in range(base*x)]
+		start = int(round(time.time() * 1000))
+		arr = merge_sort(arr)
+		end = int(round(time.time() * 1000))
+		x_points.append(len(arr))
+		y_points.append(end - start)
+		print("%d ms required to sort array of length %d using mergesort." 
+			% (end - start, len(arr)))
+	make_plot(x_points, y_points)
 
 def merge_sort(arr):
 	length = len(arr)
@@ -30,14 +29,19 @@ def merge_sort(arr):
 	# cut the array in 2
 	first = arr[:length/2]
 	last = arr[length/2:]
-	print(first, last)
 	# sort both halves
 	first = merge_sort(first)
 	last = merge_sort(last)
 	# now put them together
 	results = []
 	while len(first) > 0 or len(last) > 0:
-		if first[0] > last[0]:
+		if len(first) is 0:
+			results.append(last[0])
+			del last[0]
+		elif len(last) is 0:
+			results.append(first[0])
+			del first[0]
+		elif first[0] < last[0]:
 			results.append(first[0])
 			del first[0]
 		else:
