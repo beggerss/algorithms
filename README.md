@@ -24,7 +24,7 @@ Sort
 ----
 - [x] Bubble sort.
 - [ ] Shell sort.
-- [ ] Merge sort.  
+- [x] Merge sort.  
 - [x] Quick sort.  
 - [ ] Insertion sort.
 - [ ] Selection sort.
