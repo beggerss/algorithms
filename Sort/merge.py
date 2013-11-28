@@ -8,10 +8,10 @@ import matplotlib.pyplot as plt
 # Implementation of mergesort written in Python.
 
 def main():
-	base = 100
+	base = 1000
 	x_points = []
 	y_points = []
-	for x in range(1, 200):
+	for x in range(1, 20):
 		arr = [np.random.randint(0, base*x) for k in range(base*x)]
 		start = int(round(time.time() * 1000))
 		arr = merge_sort(arr)

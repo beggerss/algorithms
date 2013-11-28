@@ -28,6 +28,7 @@ Sort
 - [x] Quick sort.  
 - [ ] Insertion sort.
 - [ ] Selection sort.
+- [ ] Heap sort.
 
 String
 ------
@@ -41,7 +42,7 @@ String
 Numbers
 -------
 - [x] Sieve of Eratosthenes.
-- [x] Great common divisor (Eclidean).
+- [x] Great common divisor (Euclidean).
 - [ ] Least common multiple (LCM).
 - [ ] Factorial.
 - [ ] Fibonacci numbers.
