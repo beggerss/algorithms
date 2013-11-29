@@ -8,20 +8,19 @@ import matplotlib.pyplot as plt
 # Implementation of selection sort in Python.
 
 def main():
-	# base = 100
-	# x_points = []
-	# y_points = []
-	# for x in range(1, 20):
-	# 	arr = [np.random.randint(0, base*x) for k in range(base*x)]
-	# 	start = int(round(time.time() * 1000))
-	# 	arr = selection_sort(arr)
-	# 	end = int(round(time.time() * 1000))
-	# 	x_points.append(len(arr))
-	# 	y_points.append(end - start)
-	# 	print("%d ms required to sort array of length %d using selection sort." 
-	# 		% (end - start, len(arr)))
-	# make_plot(x_points, y_points)
-	print selection_sort([876,4,6,9,7,3,22])
+	base = 100
+	x_points = []
+	y_points = []
+	for x in range(1, 25):
+		arr = [np.random.randint(0, base*x) for k in range(base*x)]
+		start = int(round(time.time() * 1000))
+		arr = selection_sort(arr)
+		end = int(round(time.time() * 1000))
+		x_points.append(len(arr))
+		y_points.append(end - start)
+		print("%d ms required to sort array of length %d using selection sort." 
+			% (end - start, len(arr)))
+	make_plot(x_points, y_points)
 
 def selection_sort(arr):
 	for x in range(len(arr)):
