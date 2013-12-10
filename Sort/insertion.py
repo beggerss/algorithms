@@ -3,7 +3,7 @@
 
 import time
 import numpy as np
-import matplotlib.pyplot as plt\
+import matplotlib.pyplot as plt
 
 # Implementation of insertion sort in Python.
 
