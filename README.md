@@ -32,7 +32,7 @@ Sort
 String
 ------
 - [x] Palindrome or not.
-- [ ] String reverse.
+- [x] String reverse.
 - [ ] Words count.
 - [ ] Permutations of string. 
 - [ ] Occurrences of each character (a - z).
