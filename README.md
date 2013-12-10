@@ -9,7 +9,7 @@ The solutions might not be the most efficient--the code will be geared towards r
 Array
 ----- 
 - [x] Index of maximum element in array. 
-- [ ] In-place Array reverse.
+- [x] In-place Array reverse.
 - [ ] Intersection of two arrays.
 - [ ] Find duplicates.
 - [ ] Union of two arrays (with remove duplicates).
@@ -31,7 +31,7 @@ Sort
 
 String
 ------
-- [ ] Palindrome or not.
+- [x] Palindrome or not.
 - [ ] String reverse.
 - [ ] Words count.
 - [ ] Permutations of string. 
