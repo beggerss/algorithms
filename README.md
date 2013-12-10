@@ -78,10 +78,6 @@ Data Manipulation
 - [ ] Public-key encryption/decryption.
 - [ ] Huffman compression.
 
-Statistics
-----------------
-- [ ] Monte Carlo vs. Jakobi Iteration Heat Diffusion
-
 Pathfinding
 ---------------
 - [ ] A*
