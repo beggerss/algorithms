@@ -27,7 +27,6 @@ Sort
 - [x] Quick sort.  
 - [ ] Insertion sort.
 - [x] Selection sort.
-- [ ] Heap sort.
 
 String
 ------
