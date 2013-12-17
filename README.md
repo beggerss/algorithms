@@ -13,7 +13,6 @@ Array
 - [ ] Intersection of two arrays.
 - [ ] Find duplicates.
 - [ ] Union of two arrays (with remove duplicates).
-- [ ] Array with N unique/not unique random objects.
 
 Search
 ------ 
@@ -33,7 +32,6 @@ String
 - [x] Palindrome or not.
 - [x] String reverse.
 - [ ] Words count.
-- [ ] Permutations of string. 
 - [ ] Occurrences of each character (a - z).
 - [ ] Regex query tool.
 
@@ -42,12 +40,9 @@ Numbers
 - [x] Sieve of Eratosthenes.
 - [x] Great common divisor (Euclidean).
 - [ ] Least common multiple (LCM).
-- [ ] Factorial.
 - [ ] Fibonacci numbers.
-- [ ] Sum of digits.
 - [ ] Binary to decimal conversion.
 - [ ] Decimal to binary conversion.
-- [ ] Fast exponentiation.
 - [ ] Pi to the nth digit.
 - [ ] Next prime number (until user stops wanting them).
 - [ ] Credit card validator.
