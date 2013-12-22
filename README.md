@@ -24,8 +24,9 @@ Sort
 - [x] Bubble sort.
 - [x] Merge sort.  
 - [x] Quick sort.  
-- [ ] Insertion sort.
+- [x] Insertion sort.
 - [x] Selection sort.
+- [ ] Radix sort (positive integers).
 
 String
 ------

@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 # Implementation of insertion sort in Python.
 
 def main():
-	base = 1000
+	base = 500
 	x_points = []
 	y_points = []
 	for x in range(1, 20):
@@ -23,7 +23,13 @@ def main():
 	make_plot(x_points, y_points)
 
 def insertion_sort(arr):
-	
+	for x in range(len(arr)):
+		current = arr.pop(x)
+		index = 0
+		while arr[index] < current and x > index:
+			index += 1
+		arr.insert(index, current)
+	return arr
 
 def make_plot(x_points, y_points):
 	plt.plot(x_points, y_points, 'ro')
