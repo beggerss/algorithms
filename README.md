@@ -26,7 +26,6 @@ Sort
 - [x] Quick sort.  
 - [x] Insertion sort.
 - [x] Selection sort.
-- [ ] Radix sort (positive integers).
 
 String
 ------
