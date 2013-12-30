@@ -25,6 +25,25 @@ class LinkedList:
 			elif type(arg) is not 'NoneType':
 				self.append(arg)
 
+	def prepend(self, data):
+		"""Prepends the list with the passed data"""
+		new = ListNode(data)
+		new.next = self.head
+		self.head = new
+
+	def insert(self, data, index):
+		"""Inserts the passed data (first parameter) at an index in the list
+		specified by the second parameter. If the passed index is too high, throws
+		an error."""
+		if index > length:
+			raise InputError
+		new = ListNode(data)
+		current = self.head
+		for x in range(index - 1):
+			current = current.next
+		new.next = current.next
+		current.next = new
+
 	def append(self, data):
 		"""Append the passed data to the LinkedList."""
 		new = ListNode(data)
@@ -34,7 +53,6 @@ class LinkedList:
 		# current is now pointing at the end of the list
 		current.next = new
 		length += 1
-		return self
 
 	def get(self, index):
 		"""Returns the element at the passed index in the list."""
@@ -45,4 +63,3 @@ class LinkedList:
 
 	def delete(self, index):
 		"""Delete whatever element is at the passed index in the LinkedList."""
-		
