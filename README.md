@@ -59,8 +59,6 @@ Data structures
 - [ ] Stack (LIFO).
 - [ ] Queue (FIFO).
 - [ ] Linked list.
-	- [ ] kth-to-last element.
-	- [ ] Add element to sorted Linked List.
 - [ ] Graph 
      - [ ] DFS (depth-first search).
      - [ ] BFS (breadth-first search).
