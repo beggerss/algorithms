@@ -27,10 +27,7 @@ class LinkedList:
 
 	def prepend(self, data):
 		"""Prepends the list with the passed data"""
-		new = ListNode(data)
-		new.next = self.head
-		self.head = new
-		length += 1
+		self.insert(data, 0)
 
 	def insert(self, data, index):
 		"""Inserts the passed data (first parameter) at an index in the list
@@ -48,13 +45,7 @@ class LinkedList:
 
 	def append(self, data):
 		"""Append the passed data to the LinkedList."""
-		new = ListNode(data)
-		current = self.head
-		for x in range(length):
-			current = current.next
-		# current is now pointing at the end of the list
-		current.next = new
-		length += 1
+		self.insert(data, self.length)
 
 	def get(self, index):
 		"""Returns the element at the passed index in the list."""
@@ -63,5 +54,14 @@ class LinkedList:
 			current = current.next
 		return current.data
 
+	def remove_front(self):
+		"""Removes the front element from the list."""
+		delete(0)
+
 	def delete(self, index):
 		"""Delete whatever element is at the passed index in the LinkedList."""
+		
+
+	def remove_end(self):
+		"""Removes the last element from the list."""
+		delete(self.length)
