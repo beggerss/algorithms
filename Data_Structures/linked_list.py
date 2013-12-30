@@ -65,3 +65,15 @@ class LinkedList:
 	def remove_end(self):
 		"""Removes the last element from the list."""
 		delete(self.length)
+
+	def __str__(self):
+		to_print = "["
+		current = self.head
+		if current is not None:
+			to_print.append(current)
+			current = current.next
+		while current is not None:
+			to_print.append(", " + current)
+			current = current.next
+		to_print.append("]")
+		print(to_print)
