@@ -60,7 +60,16 @@ class LinkedList:
 
 	def delete(self, index):
 		"""Delete whatever element is at the passed index in the LinkedList."""
-		
+		if index >= length:
+			raise InputError
+		if index is 0:
+			self.head = self.head.next
+		else:
+			current = self.head
+			for x in range(index - 2):
+				current = current.next
+			current.next = current.next.next
+		length -= 1
 
 	def remove_end(self):
 		"""Removes the last element from the list."""
