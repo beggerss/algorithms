@@ -30,6 +30,7 @@ class LinkedList:
 		new = ListNode(data)
 		new.next = self.head
 		self.head = new
+		length += 1
 
 	def insert(self, data, index):
 		"""Inserts the passed data (first parameter) at an index in the list
@@ -43,6 +44,7 @@ class LinkedList:
 			current = current.next
 		new.next = current.next
 		current.next = new
+		length += 1
 
 	def append(self, data):
 		"""Append the passed data to the LinkedList."""
