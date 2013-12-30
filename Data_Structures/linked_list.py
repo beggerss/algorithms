@@ -9,6 +9,9 @@ class ListNode:
 		self.data = data
 		self.next = None
 
+	def __str__(self):
+		return str(self.data)
+
 
 class LinkedList:
 	"""LinkedList class. Note that nodes in the list can have different datatypes
@@ -33,15 +36,18 @@ class LinkedList:
 		"""Inserts the passed data (first parameter) at an index in the list
 		specified by the second parameter. If the passed index is too high, throws
 		an error."""
-		if index > length:
+		if index > self.length:
 			raise InputError
 		new = ListNode(data)
-		current = self.head
-		for x in range(index - 1):
-			current = current.next
-		new.next = current.next
-		current.next = new
-		length += 1
+		if self.head is None:
+			self.head = new
+		else:
+			current = self.head
+			for x in range(index - 2):
+				current = current.next
+			new.next = current.next
+			current.next = new
+		self.length += 1
 
 	def append(self, data):
 		"""Append the passed data to the LinkedList."""
@@ -50,7 +56,7 @@ class LinkedList:
 	def get(self, index):
 		"""Returns the element at the passed index in the list."""
 		current = self.head
-		for x in range(length):
+		for x in range(self.length):
 			current = current.next
 		return current.data
 
@@ -60,7 +66,7 @@ class LinkedList:
 
 	def delete(self, index):
 		"""Delete whatever element is at the passed index in the LinkedList."""
-		if index >= length:
+		if index >= self.length:
 			raise InputError
 		if index is 0:
 			self.head = self.head.next
@@ -69,7 +75,7 @@ class LinkedList:
 			for x in range(index - 2):
 				current = current.next
 			current.next = current.next.next
-		length -= 1
+		self.length -= 1
 
 	def remove_end(self):
 		"""Removes the last element from the list."""
@@ -79,10 +85,15 @@ class LinkedList:
 		to_print = "["
 		current = self.head
 		if current is not None:
-			to_print.append(current)
+			to_print += str(current)
 			current = current.next
 		while current is not None:
-			to_print.append(", " + current)
+			to_print += ", " + str(current)
 			current = current.next
-		to_print.append("]")
-		print(to_print)
+		to_print += "]"
+		return to_print
+
+if __name__ == "__main__":
+	x = LinkedList()
+	x.prepend(9)
+	print(x)
