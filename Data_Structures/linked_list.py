@@ -22,7 +22,7 @@ class LinkedList:
 		self.head = None
 		self.length = 0
 		for arg in args:
-			if type(arg) is 'list':
+			if type(arg) is type([]):
 				for element in args[0]:
 					self.append(element)
 			elif type(arg) is not 'NoneType':
@@ -37,13 +37,16 @@ class LinkedList:
 		specified by the second parameter. If the passed index is too high, throws
 		an error."""
 		if index > self.length:
-			raise InputError
+			raise "Invalid index!"
 		new = ListNode(data)
 		if self.head is None:
 			self.head = new
+		elif index is 0:
+			new.next = self.head
+			self.head = new
 		else:
 			current = self.head
-			for x in range(index - 2):
+			for x in range(index - 1):
 				current = current.next
 			new.next = current.next
 			current.next = new
@@ -67,7 +70,7 @@ class LinkedList:
 	def delete(self, index):
 		"""Delete whatever element is at the passed index in the LinkedList."""
 		if index >= self.length:
-			raise InputError
+			raise "Invalid index!"
 		if index is 0:
 			self.head = self.head.next
 		else:
@@ -94,6 +97,6 @@ class LinkedList:
 		return to_print
 
 if __name__ == "__main__":
-	x = LinkedList()
-	x.prepend(9)
+	x = LinkedList([0,1,2,3])
+	x.insert(10, 0)
 	print(x)
